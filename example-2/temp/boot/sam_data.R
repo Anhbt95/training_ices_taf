@@ -7,13 +7,13 @@ sam_dir <-
     "/data/"
   )
 
+# read dat files from html
 files <-
-  paste0(
-    c("cn", "cw", "dw", "lf", "lw", "mo", "nm", "pf", "pm", "survey", "sw"),
-    ".dat"
+  gsub(
+    ".*>(.+)</a>.*",
+    "\\1",
+    grep("[.]dat", readLines(sam_dir), value = TRUE)
   )
-
-files <- c(files, "RF.xlsx")
 
 for (file in files) {
   download(paste0(sam_dir, file))

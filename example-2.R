@@ -70,5 +70,15 @@ install.deps("boot") #install packages that need to be installed
 
 
 # boot
+taf.boot(taf = TRUE)
+
+# temp (for 31/05)
+taf.skeleton.sa.org("temp", "WBCod_2021_cand01")
+
+# add some software ------
+# install from github
+install.packages("icesDatras")
+devtools::install_github("ices-tools-prod/icesDatras")
+draft.software("icesDatras", file = TRUE)
 taf.boot()
 

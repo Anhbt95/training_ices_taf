@@ -149,5 +149,9 @@ install.deps("boot") #install packages that need to be installed
 # NOTE: to make sure everything is right, try taf.bootstrap with taf = TRUE at the end
 taf.bootstrap(taf = TRUE)
 
-
+# can ignore certain area -> git does not see the changes -> does not push
+# add the info to .gitignore file
+## example:
+## ignore boot data
+/boot/data/
 
